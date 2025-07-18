@@ -10,9 +10,12 @@ import io.nascimento.spring_playground.entities.User;
 @RestController
 @RequestMapping(value="/Users")
 public class UserResource {
+	
 	@GetMapping
 	public ResponseEntity<User> findAll() {
 		User exampleUser = new User(1L, "Flavio", "flavio@mail.com", "99 9 99999999", "senhaSegura123");
 		return ResponseEntity.ok().body(exampleUser);
 	}
+	
 }
+ 	
